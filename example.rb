@@ -1,7 +1,7 @@
 require 'json'
 require './d_caesar.rb'
 
-open("base64image2.json") do |io|
+open(ARGV[0]) do |io|
   arr = JSON.load(io)
   sorted = arr.sort_by { |hash| hash['id'].to_i }
   data = ""
