@@ -9,7 +9,7 @@ all.concat(["+","=","/"])
 # p all[rand(all.length-1)]
 
 arr =[]
-open("base64_.txt") do |io|
+open(ARGV[0]) do |io|
 	arr = io.each_char.each_slice(10).map{|a| a.join}
 end
 arr.pop()
